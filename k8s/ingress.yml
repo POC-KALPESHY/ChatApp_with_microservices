@@ -13,26 +13,24 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - http:
+  - host: ec2-13-219-252-189.compute-1.amazonaws.com
+    http:
       paths:
-        # Socket.io WebSocket - must be first (most specific)
-        - path: "/socket.io"
+        - path: /socket.io
           pathType: Prefix
           backend:
             service:
               name: socket-service
               port:
                 number: 5004
-        # Backend API - must be before frontend to match /api first
-        - path: "/api"
+        - path: /api
           pathType: Prefix
           backend:
             service:
               name: backend
               port:
                 number: 5001
-        # Frontend - must be last to catch all other routes
-        - path: "/"
+        - path: /
           pathType: Prefix
           backend:
             service:
