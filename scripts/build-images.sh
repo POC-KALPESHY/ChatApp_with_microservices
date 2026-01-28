@@ -5,7 +5,7 @@
 
 set -e
 
-REGISTRY=${1:-abhishekjadhav1996}
+REGISTRY=${1:-kalpeshy}
 TAG=${2:-latest}
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$SCRIPT_DIR/.."
