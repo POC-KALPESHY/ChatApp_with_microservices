@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: chatapp-frontend
-        image: abhishekjadhav1996/chatapp-frontend:latest
+        image: kalpeshy/chatapp-frontend:latest
         ports:
         - containerPort: 80
         env:
@@ -57,7 +57,7 @@ spec:
           timeoutSeconds: 3
           failureThreshold: 12
           successThreshold: 1
-          
+
 
 
 
